@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag</title>
+</head>
+<script>
+    window.onload = function () {
+        const tag = document.getElementById('tag1');
+        var time = 100;
+        const countdown = () => {
+            time -= 1;
+            tag.innerHTML = 'Goodbye Aliens: ship leaves in '+ time  + ' seconds';
+            if (time <= 0){
+                tag.innerHTML = 'Aliens left!';
+            }
+        }
+    
+        setInterval(countdown, 100);
+    }
+    
+</script>
+<body>
+    <div>
+        <h1 id="tag1">Hello Terrans</h1>
+    </div>
+</body>
+
+</html>
